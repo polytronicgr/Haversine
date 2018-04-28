@@ -21,5 +21,5 @@ Latitude: 52.954783 | Longitude: -1.158109
 Derby, UK
 Latitude: 52.92253 | Longitude: -1.474619
 
-Matlock DE4, UK
+Matlock, UK
 Latitude: 53.137156 | Longitude: -1.551774
