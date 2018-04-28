@@ -5,4 +5,8 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Haversine.Maths\Haversine.Maths.csproj" />
+  </ItemGroup>
+
 </Project>

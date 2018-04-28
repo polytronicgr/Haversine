@@ -1,0 +1,25 @@
+https://www.gps-coordinates.net/
+
+Chesterfield, UK
+Latitude: 53.235048 | Longitude: -1.421629
+
+Sheffield, UK
+Latitude: 53.381129 | Longitude: -1.470085
+
+Manchester, UK
+Latitude: 53.480759 | Longitude: -2.242631
+
+London, UK
+Latitude: 51.507351 | Longitude: -0.127758
+
+Leeds, UK
+Latitude: 53.800755 | Longitude: -1.549077
+
+Nottingham, UK
+Latitude: 52.954783 | Longitude: -1.158109
+
+Derby, UK
+Latitude: 52.92253 | Longitude: -1.474619
+
+Matlock DE4, UK
+Latitude: 53.137156 | Longitude: -1.551774
