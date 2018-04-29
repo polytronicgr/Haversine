@@ -14,9 +14,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notes", "Notes", "{CC08BA2C
 		Coordinates.txt = Coordinates.txt
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Haversine.Data", "Haversine.Data\Haversine.Data.csproj", "{932269BA-F448-4706-9D94-E8E9C3AF3608}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Haversine.Data", "Haversine.Data\Haversine.Data.csproj", "{932269BA-F448-4706-9D94-E8E9C3AF3608}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Haversine.Service", "Haversine.Service\Haversine.Service.csproj", "{B0047E57-A44A-4F9B-8082-FBC2E9324F31}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Haversine.Service", "Haversine.Service\Haversine.Service.csproj", "{B0047E57-A44A-4F9B-8082-FBC2E9324F31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Haversine.WebApi", "Haversine.WebApi\Haversine.WebApi.csproj", "{ED6BD6E4-68A2-4EA7-A1D4-E143BD37AEFB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,6 +46,10 @@ Global
 		{B0047E57-A44A-4F9B-8082-FBC2E9324F31}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B0047E57-A44A-4F9B-8082-FBC2E9324F31}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B0047E57-A44A-4F9B-8082-FBC2E9324F31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED6BD6E4-68A2-4EA7-A1D4-E143BD37AEFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED6BD6E4-68A2-4EA7-A1D4-E143BD37AEFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED6BD6E4-68A2-4EA7-A1D4-E143BD37AEFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED6BD6E4-68A2-4EA7-A1D4-E143BD37AEFB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

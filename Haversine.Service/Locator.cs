@@ -13,42 +13,67 @@ namespace Haversine.Service
             _radius = radius;
         }
 
-        public Location GetNearestTo(Location origin, IEnumerable<Location> locations)
+        public LocationDistance GetNearestTo(Location origin, IEnumerable<Location> locations)
         {
-            var destination = origin;
-            double distance = double.MaxValue;
+            var locationDistance = new LocationDistance()
+            {
+                Distance = double.MaxValue
+            };
 
             foreach (var location in locations)
             {
                 var d = SphericalDistance(origin.Coordinate, location.Coordinate);
 
-                if (d != 0 && d < distance)
+                if (d != 0 && d < locationDistance.Distance)
                 {
-                    distance = d;
-                    destination = location;
+                    locationDistance.Distance = d;
+                    locationDistance.Location = location;
                 }
             }
 
-            return destination;
+            return locationDistance;
         }
 
-        public Location GetFarthestFrom(Location origin, IEnumerable<Location> locations)
+        //public LocationDistance GetNearestDistanceToCoordinate(Coordinate origin, IEnumerable<Location> locations)
+        //{
+        //    var locationDistance = new LocationDistance()
+        //    {
+        //        Distance = double.MaxValue
+        //    };
+
+        //    foreach (var location in locations)
+        //    {
+        //        var d = SphericalDistance(origin, location.Coordinate);
+
+        //        if (d != 0 && d < locationDistance.Distance)
+        //        {
+        //            locationDistance.Location = location;
+        //            locationDistance.Distance = d;
+        //        }
+        //    }
+
+        //    return locationDistance;
+        //}
+
+        public LocationDistance GetFarthestFrom(Location origin, IEnumerable<Location> locations)
         {
-            var destination = origin;
-            double distance = double.MinValue;
+            var locationDistance = new LocationDistance()
+            {
+                Distance = double.MinValue
+            };
 
             foreach (var location in locations)
             {
                 var d = SphericalDistance(origin.Coordinate, location.Coordinate);
 
-                if (d != 0 && d > distance)
+                if (d != 0 && d > locationDistance.Distance)
                 {
-                    distance = d;
-                    destination = location;
+                    locationDistance.Distance = d;
+                    locationDistance.Location = location;
                 }
             }
 
-            return destination;
+            return locationDistance;
         }
 
         private double SphericalDistance(Coordinate orig, Coordinate dest)
