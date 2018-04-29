@@ -3,16 +3,20 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27617.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Haversine.ConsoleApp", "Haversine.ConsoleApp\Haversine.ConsoleApp.csproj", "{1098698F-E846-46D6-A050-C8646E949C0B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Haversine.ConsoleApp", "Haversine.ConsoleApp\Haversine.ConsoleApp.csproj", "{1098698F-E846-46D6-A050-C8646E949C0B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Haversine.Tests", "Haversine.Tests\Haversine.Tests.csproj", "{2DD8E74C-0431-48D1-93BE-59534DAC4467}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Haversine.Tests", "Haversine.Tests\Haversine.Tests.csproj", "{2DD8E74C-0431-48D1-93BE-59534DAC4467}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Haversine.Maths", "Haversine.Maths\Haversine.Maths.csproj", "{84121C11-7227-4208-94A6-0BD915899CBE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Haversine.Maths", "Haversine.Maths\Haversine.Maths.csproj", "{84121C11-7227-4208-94A6-0BD915899CBE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notes", "Notes", "{CC08BA2C-2EA7-43FA-AEBB-AC5C371BB16D}"
 	ProjectSection(SolutionItems) = preProject
 		Coordinates.txt = Coordinates.txt
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Haversine.Data", "Haversine.Data\Haversine.Data.csproj", "{932269BA-F448-4706-9D94-E8E9C3AF3608}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Haversine.Service", "Haversine.Service\Haversine.Service.csproj", "{B0047E57-A44A-4F9B-8082-FBC2E9324F31}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,6 +36,14 @@ Global
 		{84121C11-7227-4208-94A6-0BD915899CBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{84121C11-7227-4208-94A6-0BD915899CBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{84121C11-7227-4208-94A6-0BD915899CBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{932269BA-F448-4706-9D94-E8E9C3AF3608}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{932269BA-F448-4706-9D94-E8E9C3AF3608}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{932269BA-F448-4706-9D94-E8E9C3AF3608}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{932269BA-F448-4706-9D94-E8E9C3AF3608}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0047E57-A44A-4F9B-8082-FBC2E9324F31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0047E57-A44A-4F9B-8082-FBC2E9324F31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0047E57-A44A-4F9B-8082-FBC2E9324F31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0047E57-A44A-4F9B-8082-FBC2E9324F31}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

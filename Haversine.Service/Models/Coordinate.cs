@@ -1,4 +1,4 @@
-﻿namespace Haversine.ConsoleApp
+﻿namespace Haversine.Service.Models
 {
     public class Coordinate
     {

@@ -1,5 +1,7 @@
 ﻿using System;
-using Haversine.Maths;
+using Haversine.Data;
+using Haversine.Service;
+using Haversine.Service.Extensions;
 
 namespace Haversine.ConsoleApp
 {
@@ -8,16 +10,32 @@ namespace Haversine.ConsoleApp
         static void Main(string[] args)
         {
             Console.WriteLine("Hello Haversine!");
+            Console.WriteLine();
 
             const double radius = 6372.8; // The radius of the earth (km).
 
-            var origin = new Coordinate { Latitude = 0.0, Longitude = 0.0 };
-            var destination = new Coordinate { Latitude = 0.0, Longitude = 0.0 };
+            HaversineDbContext context = new HaversineDbContext();
+            ILocationRepository repository = new LocationRepository(context);
 
-            var distance = Formula.Haversine(radius, origin.Latitude, origin.Longitude, destination.Latitude, destination.Longitude);
+            HaversineDbInitializer initializer = new HaversineDbInitializer(context);
 
-            Console.WriteLine($"Distance: {distance} (km)");
+            initializer.Seed();
 
+            var origin = repository.GetLocation("Chesterfield").ToModel();
+
+            Console.WriteLine($"Origin: {origin.Name}");
+
+            var locations = repository.GetAllLocations().ToModel();
+
+            var locator = new Locator(radius);
+
+            var nearest = locator.GetNearestTo(origin, locations);
+            var farthest = locator.GetFarthestFrom(origin, locations);
+
+            Console.WriteLine($"Nearest: {nearest.Name}");
+            Console.WriteLine($"Farthest: {farthest.Name}");
+
+            Console.WriteLine();
             Console.WriteLine("Press a key to exit...");
             Console.ReadKey();
         }
