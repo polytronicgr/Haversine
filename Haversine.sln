@@ -18,7 +18,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Haversine.Data", "Haversine
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Haversine.Service", "Haversine.Service\Haversine.Service.csproj", "{B0047E57-A44A-4F9B-8082-FBC2E9324F31}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Haversine.WebApi", "Haversine.WebApi\Haversine.WebApi.csproj", "{ED6BD6E4-68A2-4EA7-A1D4-E143BD37AEFB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Haversine.WebApi", "Haversine.WebApi\Haversine.WebApi.csproj", "{ED6BD6E4-68A2-4EA7-A1D4-E143BD37AEFB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{DB3D181E-8DFF-4F5A-98D1-371173B56E14}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +55,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2DD8E74C-0431-48D1-93BE-59534DAC4467} = {DB3D181E-8DFF-4F5A-98D1-371173B56E14}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FFC9B848-0B40-4536-9308-66C353A50BD8}
