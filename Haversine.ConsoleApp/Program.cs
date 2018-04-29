@@ -29,8 +29,8 @@ namespace Haversine.ConsoleApp
 
             var locator = new Locator(radius);
 
-            var nearest = locator.GetNearestTo(origin, locations);
-            var farthest = locator.GetFarthestFrom(origin, locations);
+            var nearest = locator.GetNearestTo(origin.Coordinate, locations);
+            var farthest = locator.GetFarthestFrom(origin.Coordinate, locations);
 
             Console.WriteLine($"Nearest: {nearest.Location.Name} ({nearest.Distance:0.00} km)");
             Console.WriteLine($"Farthest: {farthest.Location.Name} ({farthest.Distance:0.00} km)");

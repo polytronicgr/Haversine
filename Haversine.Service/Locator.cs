@@ -13,7 +13,7 @@ namespace Haversine.Service
             _radius = radius;
         }
 
-        public LocationDistance GetNearestTo(Location origin, IEnumerable<Location> locations)
+        public LocationDistance GetNearestTo(Coordinate coordinate, IEnumerable<Location> locations)
         {
             var locationDistance = new LocationDistance()
             {
@@ -22,7 +22,7 @@ namespace Haversine.Service
 
             foreach (var location in locations)
             {
-                var d = SphericalDistance(origin.Coordinate, location.Coordinate);
+                var d = SphericalDistance(coordinate, location.Coordinate);
 
                 if (d != 0 && d < locationDistance.Distance)
                 {
@@ -34,28 +34,7 @@ namespace Haversine.Service
             return locationDistance;
         }
 
-        //public LocationDistance GetNearestDistanceToCoordinate(Coordinate origin, IEnumerable<Location> locations)
-        //{
-        //    var locationDistance = new LocationDistance()
-        //    {
-        //        Distance = double.MaxValue
-        //    };
-
-        //    foreach (var location in locations)
-        //    {
-        //        var d = SphericalDistance(origin, location.Coordinate);
-
-        //        if (d != 0 && d < locationDistance.Distance)
-        //        {
-        //            locationDistance.Location = location;
-        //            locationDistance.Distance = d;
-        //        }
-        //    }
-
-        //    return locationDistance;
-        //}
-
-        public LocationDistance GetFarthestFrom(Location origin, IEnumerable<Location> locations)
+        public LocationDistance GetFarthestFrom(Coordinate coordinate, IEnumerable<Location> locations)
         {
             var locationDistance = new LocationDistance()
             {
@@ -64,7 +43,7 @@ namespace Haversine.Service
 
             foreach (var location in locations)
             {
-                var d = SphericalDistance(origin.Coordinate, location.Coordinate);
+                var d = SphericalDistance(coordinate, location.Coordinate);
 
                 if (d != 0 && d > locationDistance.Distance)
                 {
