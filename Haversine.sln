@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27617.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Haversine.ConsoleApp", "Haversine.ConsoleApp\Haversine.ConsoleApp.csproj", "{1098698F-E846-46D6-A050-C8646E949C0B}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Haversine.Tests", "Haversine.Tests\Haversine.Tests.csproj", "{2DD8E74C-0431-48D1-93BE-59534DAC4467}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Haversine.Maths", "Haversine.Maths\Haversine.Maths.csproj", "{84121C11-7227-4208-94A6-0BD915899CBE}"
@@ -28,10 +26,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1098698F-E846-46D6-A050-C8646E949C0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1098698F-E846-46D6-A050-C8646E949C0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1098698F-E846-46D6-A050-C8646E949C0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1098698F-E846-46D6-A050-C8646E949C0B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2DD8E74C-0431-48D1-93BE-59534DAC4467}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2DD8E74C-0431-48D1-93BE-59534DAC4467}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2DD8E74C-0431-48D1-93BE-59534DAC4467}.Release|Any CPU.ActiveCfg = Release|Any CPU

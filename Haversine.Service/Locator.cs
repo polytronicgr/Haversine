@@ -4,7 +4,7 @@ using Haversine.Service.Models;
 
 namespace Haversine.Service
 {
-    public class Locator
+    public class Locator : ILocator
     {
         private readonly double _radius;
 
@@ -26,8 +26,8 @@ namespace Haversine.Service
 
                 if (d != 0 && d < locationDistance.Distance)
                 {
-                    locationDistance.Distance = d;
                     locationDistance.Location = location;
+                    locationDistance.Distance = d;
                 }
             }
 
@@ -47,8 +47,8 @@ namespace Haversine.Service
 
                 if (d != 0 && d > locationDistance.Distance)
                 {
-                    locationDistance.Distance = d;
                     locationDistance.Location = location;
+                    locationDistance.Distance = d;
                 }
             }
 

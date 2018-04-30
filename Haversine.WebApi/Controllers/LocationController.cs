@@ -1,5 +1,7 @@
-﻿using System;
+﻿using System.Collections.Generic;
+using AutoMapper;
 using Haversine.Data;
+using Haversine.Service;
 using Haversine.WebApi.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,34 +11,56 @@ namespace Haversine.WebApi.Controllers
     public class LocationController : Controller
     {
         private readonly ILocationRepository _repository;
+        private readonly ILocator _locator;
 
-        public LocationController(ILocationRepository repository)
+        public LocationController(ILocationRepository repository, ILocator locator)
         {
             _repository = repository;
+            _locator = locator;
         }
 
-        [HttpGet]
-        public IActionResult Get()
+        [HttpGet("nearest")]
+        public IActionResult GetNearestTo([FromQuery] Origin origin)
         {
-            try
-            {
-                var locations = _repository.GetAllLocations();
+            if (origin == null) return BadRequest();
 
-                return Ok(locations);
-            }
-            catch (Exception ex)
+            var coordinate = Mapper.Map<Service.Models.Coordinate>(origin);
+            var locationEntities = _repository.GetAllLocations();
+
+            if (locationEntities == null)
             {
-                // TODO: Log the exception...
+                return NotFound();
             }
 
-            // If all else fails...
-            return BadRequest();
+            var locations = Mapper.Map<IEnumerable<Service.Models.Location>>(locationEntities);
+
+            var destination = _locator.GetNearestTo(coordinate, locations);
+
+            var result = Mapper.Map<Destination>(destination);
+
+            return Ok(result);
         }
 
-        [HttpGet]
-        public IActionResult Get(double latitude, double longitude)
+        [HttpGet("farthest")]
+        public IActionResult GetFarthestFrom([FromQuery] Origin origin)
         {
+            if (origin == null) return BadRequest();
 
+            var coordinate = Mapper.Map<Service.Models.Coordinate>(origin);
+            var locationEntities = _repository.GetAllLocations();
+
+            if (locationEntities == null)
+            {
+                return NotFound();
+            }
+
+            var locations = Mapper.Map<IEnumerable<Service.Models.Location>>(locationEntities);
+
+            var destination = _locator.GetFarthestFrom(coordinate, locations);
+
+            var result = Mapper.Map<Destination>(destination);
+
+            return Ok(result);
         }
     }
 }
