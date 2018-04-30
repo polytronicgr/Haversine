@@ -20,6 +20,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Haversine.WebApi", "Haversi
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{DB3D181E-8DFF-4F5A-98D1-371173B56E14}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Haversine.Bot", "Haversine.Bot\Haversine.Bot.csproj", "{1A52FF8A-A451-448C-AEE2-B2AE133242F5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -46,6 +48,10 @@ Global
 		{ED6BD6E4-68A2-4EA7-A1D4-E143BD37AEFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED6BD6E4-68A2-4EA7-A1D4-E143BD37AEFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED6BD6E4-68A2-4EA7-A1D4-E143BD37AEFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A52FF8A-A451-448C-AEE2-B2AE133242F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A52FF8A-A451-448C-AEE2-B2AE133242F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A52FF8A-A451-448C-AEE2-B2AE133242F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A52FF8A-A451-448C-AEE2-B2AE133242F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
