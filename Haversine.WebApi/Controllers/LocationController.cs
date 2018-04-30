@@ -19,6 +19,7 @@ namespace Haversine.WebApi.Controllers
             _locator = locator;
         }
 
+        // GET: api/location/nearest?latitude=53.235048&longitude=-1.421629
         [HttpGet("nearest")]
         public IActionResult GetNearestTo([FromQuery] Origin origin)
         {
@@ -41,6 +42,7 @@ namespace Haversine.WebApi.Controllers
             return Ok(result);
         }
 
+        // GET: api/location/farthest?latitude=53.235048&longitude=-1.421629
         [HttpGet("farthest")]
         public IActionResult GetFarthestFrom([FromQuery] Origin origin)
         {
