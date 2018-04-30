@@ -55,7 +55,11 @@ namespace Haversine.WebApi
                     .ForMember(m => m.Longitude, opt => opt.MapFrom(e => e.Location.Coordinate.Longitude))
                     .ReverseMap();
 
-                config.CreateMap<Origin, Service.Models.Coordinate>().ReverseMap();
+                config.CreateMap<Origin, Service.Models.Coordinate>()
+                    .ReverseMap();
+
+                config.CreateMap<Location, Data.Entities.Location>()
+                    .ReverseMap();
             });
 
             app.UseMvc();

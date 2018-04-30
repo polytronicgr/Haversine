@@ -19,6 +19,38 @@ namespace Haversine.WebApi.Controllers
             _locator = locator;
         }
 
+        // GET: api/location
+        [HttpGet]
+        public IActionResult Get()
+        {
+            var locationEntities = _repository.GetAllLocations();
+
+            if (locationEntities == null)
+            {
+                return NotFound();
+            }
+
+            var locations = Mapper.Map<IEnumerable<Location>>(locationEntities);
+
+            return Ok(locations);
+        }
+
+        // GET: api/location/chesterfield
+        [HttpGet("{name}")]
+        public IActionResult Get(string name)
+        {
+            var locationEntity = _repository.GetLocation(name);
+
+            if (locationEntity == null)
+            {
+                return NotFound();
+            }
+
+            var location = Mapper.Map<Location>(locationEntity);
+
+            return Ok(location);
+        }
+
         // GET: api/location/nearest?latitude=53.235048&longitude=-1.421629
         [HttpGet("nearest")]
         public IActionResult GetNearestTo([FromQuery] Origin origin)
