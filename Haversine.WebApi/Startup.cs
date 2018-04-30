@@ -29,7 +29,7 @@ namespace Haversine.WebApi
             services.AddDbContext<HaversineDbContext>(opt => opt.UseSqlServer(connectionString));
 
             services.AddScoped<ILocationRepository, LocationRepository>();
-            services.AddScoped<ILocator, Locator>();
+            services.AddScoped<ILocator, EarthLocator>();
 
             services.AddMvc();
         }

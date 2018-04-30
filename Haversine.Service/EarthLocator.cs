@@ -4,14 +4,9 @@ using Haversine.Service.Models;
 
 namespace Haversine.Service
 {
-    public class Locator : ILocator
+    public class EarthLocator : ILocator
     {
-        private readonly double _radius;
-
-        public Locator(double radius = 6372.8) // The radius of the earth (km).
-        {
-            _radius = radius;
-        }
+        private const double _radius = 6372.8; // The radius of the earth (km).
 
         public LocationDistance GetNearestTo(Coordinate coordinate, IEnumerable<Location> locations)
         {
